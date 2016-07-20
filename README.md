@@ -7,4 +7,4 @@ Inspired by https://github.com/Nargren/PirateBox
 
 Matthias Strubel for developing the PirateBox.
 
-David Darts for having the awesome idea.
+David Darts for having the idea.
