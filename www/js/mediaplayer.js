@@ -9,6 +9,12 @@ var allTracks = [],		// An array for all the files loaded in the track
 	timer = 0;			// An interval for the track's current time.
 
 
+console.log(importTracks);
+
+for (var i = importTracks.length - 1; i >= 0; i--) {
+	allTracks.push(importTracks[i]);
+}
+
 startPlayerWhenReady();
 
 

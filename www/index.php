@@ -2,6 +2,8 @@
 <html>
 <head>
 	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/styles.css">
+	<link rel="stylesheet" href="/css/font-awesome-4.3.0/css/font-awesome.min.css">
 	<title>PirateBox - Share Freely!</title>
 	<link rel="stylesheet" href="/css/jquery-ui.min.css">
 	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width">
@@ -21,13 +23,64 @@
 		<nav id="top-nav">
 			<ul>
 				<li><a href="/" class="current">Home</a></li>
-				<li><a href="/board/">Forum</a></li>
+				<li><a href="#juke">Jukebox</a></li>
 				<li><a href="/Shared/">Files</a></li>
 				<li><a href="#about">About</a></li>
 			</ul>
 		</nav>
 	</div>
 </header>
+
+<section id="juke">
+	<div id="container" class="disabled">
+
+	<div id="cover-art">
+		<div id="cover-art-big"></div>
+		<img id="cover-art-small" alt="cover-art-small" src="/img/default.png">
+		<div class="instructions">Drop your audio files here.</div>
+	</div>
+
+	<div id="wave"></div>
+
+	<div id="control-bar">
+
+		<div class="player-control">
+			<div id="previous-button" title="Previous"><i class="fa fa-fast-backward"></i></div>
+			<div id="play-button" title="Play"><i class="fa fa-play"></i></div>
+			<div id="pause-button" title="Pause"><i class="fa fa-pause"></i></div>
+			<div id="stop-button" title="Stop"><i class="fa fa-stop"></i></div>
+			<div id="next-button" title="Next"><i class="fa fa-fast-forward"></i></div>
+			<div id="shuffle-button" title="Shuffle Off"><i class="fa fa-random"></i></div>
+			<div id="repeat-button" title="Repeat Off"><i class="fa fa-refresh"><span>1</span></i></div>
+		</div>
+
+		<div id="playlist">
+
+			<div id="track-details" title="Show playlist">
+				<i class="fa fa-sort"></i>
+				<p id="track-desc">There are no tracks loaded in the player.</p>
+				<p id="track-time">
+					<span id="current">-</span> / <span id="total">-</span>
+				</p>
+			</div>
+
+			<div id="expand-bar" class="hidden">
+
+				<form>
+					<label for="searchBox">Search</label><div><input id="searchBox" type="search" name="search"></div>
+				</form>
+				<ul id="list"></ul>
+			</div>
+
+		</div>
+
+	</div>
+
+	<div id="drop-zone" class="hidden">Drag &amp; Drop Files Here</div>
+
+</div>
+
+</section>
 
 <section id="content">
 	<div class="container">
@@ -96,7 +149,12 @@
 </footer>
 
 </body>
+<?php include 'files.php';?>
 <script src="/js/jquery.min.js"></script>
 <script src="/js/jquery-ui.min.js"></script>
-<script src="/js/scripts.js"></script>
+<script src="/js/piratebox.js"></script>
+<script src="/js/id3-minimized.js"></script>
+<script src="/js/wavesurfer.min.js"></script>
+<script src="/js/mediaplayer.js"></script>
+
 </html>
