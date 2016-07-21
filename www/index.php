@@ -2,7 +2,6 @@
 <html>
 <head>
 	<link rel="stylesheet" href="/css/style.css">
-	<link rel="stylesheet" href="/css/styles.css">
 	<link rel="stylesheet" href="/css/font-awesome-4.3.0/css/font-awesome.min.css">
 	<title>PirateBox - Share Freely!</title>
 	<link rel="stylesheet" href="/css/jquery-ui.min.css">
@@ -23,7 +22,6 @@
 		<nav id="top-nav">
 			<ul>
 				<li><a href="/" class="current">Home</a></li>
-				<li><a href="#juke">Jukebox</a></li>
 				<li><a href="/Shared/">Files</a></li>
 				<li><a href="#about">About</a></li>
 			</ul>
@@ -31,64 +29,13 @@
 	</div>
 </header>
 
-<section id="juke">
-	<div id="container" class="disabled">
-
-	<div id="cover-art">
-		<div id="cover-art-big"></div>
-		<img id="cover-art-small" alt="cover-art-small" src="/img/default.png">
-		<div class="instructions">Drop your audio files here.</div>
-	</div>
-
-	<div id="wave"></div>
-
-	<div id="control-bar">
-
-		<div class="player-control">
-			<div id="previous-button" title="Previous"><i class="fa fa-fast-backward"></i></div>
-			<div id="play-button" title="Play"><i class="fa fa-play"></i></div>
-			<div id="pause-button" title="Pause"><i class="fa fa-pause"></i></div>
-			<div id="stop-button" title="Stop"><i class="fa fa-stop"></i></div>
-			<div id="next-button" title="Next"><i class="fa fa-fast-forward"></i></div>
-			<div id="shuffle-button" title="Shuffle Off"><i class="fa fa-random"></i></div>
-			<div id="repeat-button" title="Repeat Off"><i class="fa fa-refresh"><span>1</span></i></div>
-		</div>
-
-		<div id="playlist">
-
-			<div id="track-details" title="Show playlist">
-				<i class="fa fa-sort"></i>
-				<p id="track-desc">There are no tracks loaded in the player.</p>
-				<p id="track-time">
-					<span id="current">-</span> / <span id="total">-</span>
-				</p>
-			</div>
-
-			<div id="expand-bar" class="hidden">
-
-				<form>
-					<label for="searchBox">Search</label><div><input id="searchBox" type="search" name="search"></div>
-				</form>
-				<ul id="list"></ul>
-			</div>
-
-		</div>
-
-	</div>
-
-	<div id="drop-zone" class="hidden">Drag &amp; Drop Files Here</div>
-
-</div>
-
-</section>
 
 <section id="content">
 	<div class="container">
 		<div id="welcome">
 			<div id="greeting" class="card">
-				<h2>Welcome</h2>
-				<p>Now, first of all, there is nothing illegal or scary going on here. This is a social place where you can chat and share files with people around you, <strong>anonymously</strong>! This is an off-line network, specially designed and developed for file-sharing and chat services. Staying off the grid is a precaution to maintain your full anonymity. Please have fun, chat with people, and feel free to share any files you may like.</p>
-				<input id="thanks" class="button" type="submit" value="Thanks">
+			<h2>Listen</h2>
+				<?php include 'files.php';?>
 			</div>
 		</div>
 		<div id="sidebar">
@@ -135,26 +82,25 @@
 		</div>
 	</div>
 </section>
-
 <footer id="about">
 	<div class="container">
 		<div id="details">
 			<p class="to-top"><a href="#header">Back to top</a></p>
+			<h2>About Pirateify</h2>
+			<p>Inspired by and based on Pirate Box, Pirateify is an offline music sharing and listening device to encourage the free sharing and enjoyment of culture.</p>
 			<h2>About PirateBox</h2>
-			<p>Inspired by pirate radio and the free culture movement, PirateBox is a self-contained mobile collaboration and file sharing device. PirateBox utilizes Free, Libre and Open Source software (FLOSS) to create mobile wireless file sharing networks where users can anonymously share images, video, audio, documents, and other digital content.</p>
-			<p>PirateBox is designed to be safe and secure. No logins are required and no user data is logged. The system is purposely not connected to the Internet in order to prevent tracking and preserve user privacy.</p>
+			<p>PirateBox is a self-contained mobile collaboration and file sharing device. PirateBox utilizes Free, Libre and Open Source software (FLOSS) to create mobile wireless file sharing networks where users can anonymously share images, video, audio, documents, and other digital content.</p>
 			<small>PirateBox is licensed under GPLv3.</small>
 		</div>
 	</div>
 </footer>
-
 </body>
-<?php include 'files.php';?>
+
 <script src="/js/jquery.min.js"></script>
 <script src="/js/jquery-ui.min.js"></script>
 <script src="/js/piratebox.js"></script>
 <script src="/js/id3-minimized.js"></script>
 <script src="/js/wavesurfer.min.js"></script>
-<script src="/js/mediaplayer.js"></script>
+<script src="/js/html5juke.js"></script>
 
 </html>
