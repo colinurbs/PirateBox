@@ -13,7 +13,7 @@ scp web files over:
 
 sudo scp -r "localwwwfolder" "username"@"pirateboxaddress":/opt/piratebox/
 
-###---Credits---###
+### Credits 
 Inspired by https://github.com/Nargren/PirateBox
 
 Matthias Strubel for developing the PirateBox.
