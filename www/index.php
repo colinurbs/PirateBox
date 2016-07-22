@@ -34,8 +34,14 @@
 	<div class="container">
 		<div id="welcome">
 			<div id="greeting" class="card">
-			<h2>Listen</h2>
-				<?php include 'files.php';?>
+				<h2 id="track-title">Listen</h2>
+				<div id="currently-playing">
+				    <audio id="audio" controls="controls">
+				        <source id="mp3Source" type="audio/mp3"></source>
+				    </audio>
+				</div>
+				<ul id="playlist">
+				</ul>
 			</div>
 		</div>
 		<div id="sidebar">
@@ -87,7 +93,7 @@
 		<div id="details">
 			<p class="to-top"><a href="#header">Back to top</a></p>
 			<h2>About Pirateify</h2>
-			<p>Inspired by and based on Pirate Box, Pirateify is an offline music sharing and listening device to encourage the free sharing and enjoyment of culture.</p>
+			<p>Inspired by and based on Pirate Box, Pirateify is an offline music sharing and listening device to encourage the free sharing and enjoyment of music.</p>
 			<h2>About PirateBox</h2>
 			<p>PirateBox is a self-contained mobile collaboration and file sharing device. PirateBox utilizes Free, Libre and Open Source software (FLOSS) to create mobile wireless file sharing networks where users can anonymously share images, video, audio, documents, and other digital content.</p>
 			<small>PirateBox is licensed under GPLv3.</small>
@@ -95,12 +101,12 @@
 	</div>
 </footer>
 </body>
-
+<?php include 'files.php';?>
 <script src="/js/jquery.min.js"></script>
 <script src="/js/jquery-ui.min.js"></script>
 <script src="/js/piratebox.js"></script>
-<script src="/js/id3-minimized.js"></script>
-<script src="/js/wavesurfer.min.js"></script>
+<script src="/js/jsmediatags.min.js"></script>
 <script src="/js/html5juke.js"></script>
+
 
 </html>

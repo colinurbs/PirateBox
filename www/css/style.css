@@ -393,4 +393,13 @@ Licensed under the MIT license.
   margin:0px;
   padding:10px;
   border-bottom: 1px solid #ddd;
+  cursor:pointer;
+}
+
+.track:hover {
+  border-color:#ccc;
+}
+
+.active {
+  background:#ededed;
 }
