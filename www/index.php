@@ -2,6 +2,7 @@
 <html>
 <head>
 	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/dataTables.jqueryui.min.css">
 	<link rel="stylesheet" href="/css/font-awesome-4.3.0/css/font-awesome.min.css">
 	<title>PirateBox - Share Freely!</title>
 	<link rel="stylesheet" href="/css/jquery-ui.min.css">
@@ -28,20 +29,24 @@
 		</nav>
 	</div>
 </header>
-
-
 <section id="content">
 	<div class="container">
 		<div id="welcome">
 			<div id="greeting" class="card">
 				<h2 id="track-title">Listen</h2>
 				<div id="currently-playing">
-				    <audio id="audio" controls="controls">
-				        <source id="mp3Source" type="audio/mp3"></source>
-				    </audio>
+					<audio id="audio" controls="controls">
+						<source id="mp3Source" type="audio/mp3"></source>
+					</audio>
 				</div>
-				<ul id="playlist">
-				</ul>
+				<table id="playlist" class="stripe hover row-border">
+					<thead>
+					<tr><th>Artist</th><th>Song</th><th>Album</th><td></td></tr>
+					</thead>
+					<tbody>
+						<?php include 'files.php';?>
+					</tbody>
+				</table>
 			</div>
 		</div>
 		<div id="sidebar">
@@ -101,12 +106,9 @@
 	</div>
 </footer>
 </body>
-<?php include 'files.php';?>
 <script src="/js/jquery.min.js"></script>
 <script src="/js/jquery-ui.min.js"></script>
+<script src="/js/jquery.dataTables.min.js"></script>
 <script src="/js/piratebox.js"></script>
-<script src="/js/jsmediatags.min.js"></script>
 <script src="/js/html5juke.js"></script>
-
-
 </html>
