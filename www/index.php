@@ -31,9 +31,9 @@
 </header>
 <section id="content">
 	<div class="container">
-		<div id="welcome">
+		<div style="position:fixed; top:0px; left:0px; right:0px;" id="welcome">
 			<div id="greeting" class="card">
-				<h2 id="track-title">Listen</h2>
+				<h2 id="track-title">Choose a track to begin listening</h2>
 				<div id="currently-playing">
 					<audio id="audio" controls="controls">
 						<source id="mp3Source" type="audio/mp3"></source>
@@ -41,7 +41,7 @@
 				</div>
 				<table id="playlist" class="stripe hover row-border">
 					<thead>
-					<tr><th>Artist</th><th>Song</th><th>Album</th><td></td></tr>
+						<tr><th>Artist</th><th>Song</th><th>Album</th><td></td></tr>
 					</thead>
 					<tbody>
 						<?php include 'files.php';?>
@@ -49,15 +49,14 @@
 				</table>
 			</div>
 		</div>
-		<div id="sidebar">
-			<div id="upload" class="card">
+		<!-- <div style="position:fixed; top:0px;  right:0px; height:150px;" id="upload" class="card">
 				<h2>Upload</h2>
 				<iframe width="100%" height="80" src='http://piratebox.lan:8080' style='border:0px'>
 					Your browser does not support iframes.. If you want to upload something, follow this <a href='http://piratebox.lan:8080'>Link</a>.
 				</iframe>
-				<h3><a href="/Shared">Browse Files -></a></h3>
-				<div id="station"></div>
-			</div>
+			</div> -->
+		<!-- <div id="sidebar">
+			
 			<div id="diskusagecard" class="card">
 				<h2>Disk Usage</h2>
 				<div id="diskusage"></div>
@@ -69,8 +68,8 @@
 			</div>
 
 		</div>
-
-		<div id="main">
+ -->
+<!-- 		<div id="main">
 			<div id="chat" class="card">
 				<h2>Chat</h2>
 				<div id="shoutbox" class="shoutbox_content"></div>
@@ -92,7 +91,7 @@
 			</div>
 		</div>
 	</div>
-</section>
+</section> -->
 <footer id="about">
 	<div class="container">
 		<div id="details">

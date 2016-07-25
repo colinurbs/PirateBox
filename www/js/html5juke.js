@@ -1,6 +1,12 @@
 
 
- $('#playlist').DataTable();
+ $('#playlist').DataTable({
+    "iDisplayLength": 10000,
+    deferRender:    true,
+    scrollY:        600,
+    scrollCollapse: true,
+    scroller:       true
+  });
 
 //play a song
 $('body').on('click', '.track', function() {
@@ -10,7 +16,7 @@ $('body').on('click', '.track', function() {
 		//play audio
         var audio = document.getElementById('audio');
         var source = document.getElementById('mp3Source');
-        source.src = '/Shared/' + $(this).attr('data-url');
+        source.src = '/Shared/' + $(this).closest('tr').attr('data-url');
         audio.load(); //call this to just preload the audio without playing
         audio.play(); //call this to play the song right away
     
@@ -19,9 +25,9 @@ $('body').on('click', '.track', function() {
    			 $(obj).removeClass('active');
 
 		});
-        $(this).addClass('active');
+        $(this).closest('tr').addClass('active');
 
-        $('#track-title').html($(this).attr('data-title'));
+        $('#track-title').html($(this).closest('tr').attr('data-title'));
 
 
 
