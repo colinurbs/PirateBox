@@ -20,7 +20,7 @@ function getDirContents($dir, &$results = array()){
 
 				$tags = $tags->getId3Array();
 
-
+				
 				if(count($tags)> 0) 
 				{
 			 
