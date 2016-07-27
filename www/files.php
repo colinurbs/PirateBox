@@ -7,14 +7,9 @@ use PhpId3\Id3TagsReader;
 function getDirContents($dir, &$results = array()){
 	$files = scandir($dir);
 
-
-
 	foreach($files as $key => $value){
 		$path = realpath($dir.DIRECTORY_SEPARATOR.$value);
 		$parts = explode("/", $path);
-
-
-
 
 		if(!is_dir($path)) {
 
@@ -24,9 +19,13 @@ function getDirContents($dir, &$results = array()){
 				$tags->readAllTags();
 
 				$tags = $tags->getId3Array();
+
+
+				if(count($tags)> 0) 
+				{
 			 
-				echo '<tr data-title="'.$tags['TIT2']['body'].'" data-url="'.$parts[count($parts) - 1].'"><td class="track">'.$tags['TPE1']['body'].'</td><td class="track">'.$tags['TIT2']['body'].'</td><td class="track">'.$tags['TALB']['body'].'</td><td><a  download href ="/Shared/'.$parts[count($parts) - 1].'"><i style="color:green;" class="fa fa-download" aria-hidden="true"></i></a></td></tr>';
-				
+				echo '<tr class="track_row" id="'.$key.'" data-title="'.$tags['TIT2']['body'].'" data-url="'.$parts[count($parts) - 1].'"><td class="track">'.$tags['TPE1']['body'].'</td><td class="track">'.$tags['TIT2']['body'].'</td><td class="track">'.$tags['TALB']['body'].'</td><td><a  download href ="/Shared/'.$parts[count($parts) - 1].'"><i style="color:green;" class="fa fa-download" aria-hidden="true"></i></a></td></tr>';
+				}
 
 				$results[] =  $parts[count($parts) - 1];
 			}
