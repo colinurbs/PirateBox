@@ -1,17 +1,3 @@
-
-var allTracks = [],		// An array for all the files loaded in the track
-	playlist = [], 		// An array for the current playlist
-	temporarySearchPlaylist = [],	// A helper array for when we are searching
-	i = 0, 				// The number of the current track
-	shuffle = false,	// Shuffle flag
-	repeat = 0,			// Repeat flag
-	lastPlayed = [],	// Array for last played (used when shuffling songs)
-	timer = 0;			// An interval for the track's current time.
-
-
-startPlayerWhenReady();
-
-
 /*---------------------
 	Dropping files
 ----------------------*/

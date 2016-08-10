@@ -36,7 +36,7 @@
 	font-family:Verdana, Arial, sans-serif;
 	line-height:1.6;
 	color: #666;
-	border:1px solid #009be3;
+	border:1px solid #ad000b;
 	background-color:#eee;
 }
 .jp-audio {
@@ -101,7 +101,7 @@
 }
 
 .jp-video .jp-interface {
-	border-top:1px solid #009be3;
+	border-top:1px solid #ad000b;
 }
 
 /* @group CONTROLS */
@@ -376,7 +376,7 @@
 .jp-playlist {
 	width:100%;
 	background-color:#ccc;
-	border-top:1px solid #009be3;
+	border-top:1px solid #ad000b;
 }
 
 .jp-type-single .jp-details,
